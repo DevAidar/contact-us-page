@@ -40,7 +40,14 @@ body,
   margin: 70px 0;
 }
 
-.agreement--checkbox {
+input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+.highlight {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  border: 2px solid red;
 }

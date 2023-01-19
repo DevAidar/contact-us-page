@@ -1,5 +1,5 @@
 import image from "./assets/bg-image.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Products() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,8 @@ export default function Products() {
     number: "",
     isAccepted: false,
   });
+
+  const [submitClicked, setSubmitClicked] = useState(false);
 
   function handleChange(e) {
     setFormData((prev) => {
@@ -27,7 +29,7 @@ export default function Products() {
     if (Object.values(formData).every((item) => item)) {
       console.log(formData);
     } else {
-      console.log("not all");
+      setSubmitClicked(true);
     }
   }
 
@@ -43,9 +45,9 @@ export default function Products() {
             <input
               type="text"
               name="fName"
-              id="fName"
               onChange={handleChange}
               value={formData.fName}
+              className={submitClicked && !formData.fName ? "highlight" : ""}
             />
           </p>
 
@@ -54,9 +56,9 @@ export default function Products() {
             <input
               type="text"
               name="lName"
-              id="lName"
               onChange={handleChange}
               value={formData.lName}
+              className={submitClicked && !formData.lName ? "highlight" : ""}
             />
           </p>
 
@@ -65,9 +67,9 @@ export default function Products() {
             <input
               type="email"
               name="email"
-              id="email"
               onChange={handleChange}
               value={formData.email}
+              className={submitClicked && !formData.email ? "highlight" : ""}
             />
           </p>
 
@@ -76,9 +78,9 @@ export default function Products() {
             <input
               type="tel"
               name="number"
-              id="number"
               onChange={handleChange}
               value={formData.number}
+              className={submitClicked && !formData.number ? "highlight" : ""}
             />
           </p>
 
@@ -89,14 +91,15 @@ export default function Products() {
             <input
               type="checkbox"
               name="isAccepted"
-              id="agreement"
-              className="agreement--checkbox"
+              className={
+                submitClicked && !formData.isAccepted ? "highlight" : ""
+              }
               onChange={handleChange}
               checked={formData.isAccepted}
             />
           </p>
 
-          <input type="submit" className="btn" value="Submit"></input>
+          <button>Submit</button>
         </form>
       </span>
       <img src={image} alt="" />

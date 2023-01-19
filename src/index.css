@@ -79,7 +79,6 @@ input[type="checkbox"] {
   .main--container img {
     grid-row: 2/3;
     grid-column: 1/2;
-    height: 100%;
   }
 
   header {

@@ -1,0 +1,21 @@
+html,
+body,
+#root,
+.App {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+.main-container img {
+  width: 50%;
+}
+
+.main-container form {
+  width: 50%;
+}

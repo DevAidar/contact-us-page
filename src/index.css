@@ -9,6 +9,7 @@ body,
 
 .main-container {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -16,6 +17,30 @@ body,
   width: 50%;
 }
 
-.main-container form {
+.main-container span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
+}
+
+.main-container p {
+  /* width: 80%; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 15px;
+}
+.main-container label {
+  width: 50%;
+  text-align: start;
+}
+
+.agreement--section {
+  margin-top: 70px;
+}
+
+.agreement--checkbox {
+  width: 20px;
+  height: 20px;
 }

@@ -10,6 +10,8 @@ export default function Products() {
     isAccepted: false,
   });
 
+  const errorText = "Please fill in";
+
   const [submitClicked, setSubmitClicked] = useState(false);
 
   function handleChange(e) {
@@ -49,6 +51,7 @@ export default function Products() {
             value={formData.fName}
             className={submitClicked && !formData.fName ? "highlight" : ""}
           />
+          {submitClicked && !formData.fName && <p>{errorText}</p>}
         </div>
 
         <div className="lName--section">
@@ -61,6 +64,7 @@ export default function Products() {
             value={formData.lName}
             className={submitClicked && !formData.lName ? "highlight" : ""}
           />
+          {submitClicked && !formData.lName && <p>{errorText}</p>}
         </div>
 
         <div className="email--section">
@@ -73,6 +77,7 @@ export default function Products() {
             value={formData.email}
             className={submitClicked && !formData.email ? "highlight" : ""}
           />
+          {submitClicked && !formData.email && <p>{errorText}</p>}
         </div>
 
         <div className="number--section">
@@ -85,6 +90,7 @@ export default function Products() {
             value={formData.number}
             className={submitClicked && !formData.number ? "highlight" : ""}
           />
+          {submitClicked && !formData.number && <p>{errorText}</p>}
         </div>
 
         <div className="agreement--section">

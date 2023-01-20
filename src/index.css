@@ -45,7 +45,7 @@ header {
 .main--container form {
   margin-top: 3em;
   display: grid;
-  width: 65%;
+  width: 75%;
   height: 50%;
   grid-template-columns: 50% 50%;
   grid-template-rows: 15% 15% 15% 30% 25%;
@@ -98,6 +98,11 @@ button {
   -webkit-appearance: none;
   -o-appearance: none;
   border: 2px solid red;
+}
+
+p {
+  font-size: smaller;
+  color: red;
 }
 
 @media (max-width: 650px) {

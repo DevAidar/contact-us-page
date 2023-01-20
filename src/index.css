@@ -105,10 +105,15 @@ p {
   color: red;
 }
 
+.thank-you--section {
+  min-width: 40vw;
+  text-align: center;
+}
+
 @media (max-width: 650px) {
   .main--container {
     grid-template-columns: 1fr;
-    grid-template-rows: 12% 40% 48%;
+    grid-template-rows: 10% 35% 55%;
     width: 100vw;
   }
 
@@ -128,9 +133,11 @@ p {
     grid-column: 1/2;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 10% 10% 10% 30% 30%;
+    grid-template-rows: 10% 10% 10% 10% 15% 45%;
     column-gap: 0;
+    row-gap: 3em;
     width: 85%;
+    margin-bottom: 5em;
   }
 
   .fName--section {
@@ -150,6 +157,11 @@ p {
   }
 
   .agreement--section {
-    margin: 30px 0;
+    margin: 0;
+    grid-row: 5/6;
+  }
+
+  .button--container {
+    grid-row: 6/7;
   }
 }

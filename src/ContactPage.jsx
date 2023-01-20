@@ -39,41 +39,49 @@ export default function Products() {
         <h1>Contact Us</h1>
       </header>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="fName">First name</label>
-        <input
-          type="text"
-          name="fName"
-          onChange={handleChange}
-          value={formData.fName}
-          className={submitClicked && !formData.fName ? "highlight" : ""}
-        />
+        <div className="fName--section">
+          <label htmlFor="fName">First name</label>
+          <input
+            type="text"
+            name="fName"
+            onChange={handleChange}
+            value={formData.fName}
+            className={submitClicked && !formData.fName ? "highlight" : ""}
+          />
+        </div>
 
-        <label htmlFor="lName">Last name</label>
-        <input
-          type="text"
-          name="lName"
-          onChange={handleChange}
-          value={formData.lName}
-          className={submitClicked && !formData.lName ? "highlight" : ""}
-        />
+        <div className="lName--section">
+          <label htmlFor="lName">Last name</label>
+          <input
+            type="text"
+            name="lName"
+            onChange={handleChange}
+            value={formData.lName}
+            className={submitClicked && !formData.lName ? "highlight" : ""}
+          />
+        </div>
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          onChange={handleChange}
-          value={formData.email}
-          className={submitClicked && !formData.email ? "highlight" : ""}
-        />
+        <div className="email--section">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+            className={submitClicked && !formData.email ? "highlight" : ""}
+          />
+        </div>
 
-        <label htmlFor="number">Phone number</label>
-        <input
-          type="number"
-          name="number"
-          onChange={handleChange}
-          value={formData.number}
-          className={submitClicked && !formData.number ? "highlight" : ""}
-        />
+        <div className="number--section">
+          <label htmlFor="number">Phone number</label>
+          <input
+            type="number"
+            name="number"
+            onChange={handleChange}
+            value={formData.number}
+            className={submitClicked && !formData.number ? "highlight" : ""}
+          />
+        </div>
 
         <div className="agreement--section">
           <label htmlFor="agreement">I agree to the terms and conditions</label>

@@ -44,6 +44,7 @@ export default function Products() {
           <input
             type="text"
             name="fName"
+            placeholder="John"
             onChange={handleChange}
             value={formData.fName}
             className={submitClicked && !formData.fName ? "highlight" : ""}
@@ -55,6 +56,7 @@ export default function Products() {
           <input
             type="text"
             name="lName"
+            placeholder="Doe"
             onChange={handleChange}
             value={formData.lName}
             className={submitClicked && !formData.lName ? "highlight" : ""}
@@ -66,6 +68,7 @@ export default function Products() {
           <input
             type="email"
             name="email"
+            placeholder="johndoe@gmail.com"
             onChange={handleChange}
             value={formData.email}
             className={submitClicked && !formData.email ? "highlight" : ""}
@@ -77,6 +80,7 @@ export default function Products() {
           <input
             type="number"
             name="number"
+            placeholder="901-282-3639"
             onChange={handleChange}
             value={formData.number}
             className={submitClicked && !formData.number ? "highlight" : ""}
